@@ -24,6 +24,8 @@ let pokemonList = [
 ];
 
 //end ↑↑↑
+
+//write the pokimonList with "for" in body
 for (let i = 0; i <= pokemonList.length; i++) {
   // console.log(pokemonList[i].name)
   document.write(
@@ -39,3 +41,28 @@ for (let i = 0; i <= pokemonList.length; i++) {
     document.write("(❁´◡`) Wow, that's big one!");
   }
 }
+
+// end
+
+/*
+//write the pokimonList with "while" in body
+
+let i = 0;
+while (i <= pokemonList.length) {
+  document.write(
+    pokemonList[i].id +
+      "-" +
+      pokemonList[i].name +
+      "(" +
+      "weight is : " +
+      pokemonList[i].weight +
+      ") + "
+  );
+  if (pokemonList[i].weight >= 9) {
+    document.write("(❁´◡`) Wow, that's big one!");
+  }
+  i++;
+}
+
+// end
+*/
