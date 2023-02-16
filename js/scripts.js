@@ -26,21 +26,21 @@ let pokemonList = [
 //end ↑↑↑
 
 //write the pokimonList with "for" in body
-for (let i = 0; i <= pokemonList.length; i++) {
-  // console.log(pokemonList[i].name)
-  document.write(
-    pokemonList[i].id +
-      "-" +
-      pokemonList[i].name +
-      "(" +
-      "weight is : " +
-      pokemonList[i].weight +
-      ") + "
-  );
-  if (pokemonList[i].weight >= 9) {
-    document.write("(❁´◡`) Wow, that's big one!");
-  }
-}
+// for (let i = 0; i <= pokemonList.length; i++) {
+//   // console.log(pokemonList[i].name)
+//   document.write(
+//     pokemonList[i].id +
+//       "-" +
+//       pokemonList[i].name +
+//       "(" +
+//       "weight is : " +
+//       pokemonList[i].weight +
+//       ") + "
+//   );
+//   if (pokemonList[i].weight >= 9) {
+//     document.write("(❁´◡`) Wow, that's big one!");
+//   }
+// }
 
 // end
 
@@ -66,3 +66,26 @@ while (i <= pokemonList.length) {
 
 // end
 */
+
+// Update the pokimonList with "forEach"
+pokemonList.forEach((pokemon) => {
+  document.write(
+    "<ul> <li>" +
+      " ID: " +
+      pokemon.id +
+      "-" +
+      pokemon.name +
+      "(" +
+      "weight is : " +
+      pokemon.weight +
+      ")" +
+      "</li> </ul>"
+  );
+  if (pokemon.weight >= 9) {
+    document.write(
+      "<pre class='size__announcer'>" + "that's the big one! ⤴" + "</pre>"
+    );
+  }
+});
+
+// end
