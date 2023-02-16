@@ -67,7 +67,7 @@ while (i <= pokemonList.length) {
 // end
 */
 
-// Update the pokimonList with "forEach"
+// Update the pokemonList with "forEach"
 pokemonList.forEach((pokemon) => {
   document.write(
     "<ul> <li>" +
