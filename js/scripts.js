@@ -1,7 +1,7 @@
 //the reference belong: https://pokedex.org/#/pokemon/1 ↓↓↓
 
 const pokemonRepository = (function () {
-  let pokemonList = [
+  let repository = [
     {
       id: 1,
       name: "Bulbasaur",
@@ -26,38 +26,58 @@ const pokemonRepository = (function () {
   ];
 
   function getAll() {
-    return pokemonList;
+    return repository;
   }
 
   function add(pokemon) {
     if (typeof pokemon === "object") {
-      pokemonList.push(pokemon);
+      repository.push(pokemon);
     } else {
       console.error("it is not an object!");
     }
   }
 
+  function showDetails(pokemon) {
+    console.log(pokemon);
+  }
+
+  function addListItem(pokemon) {
+    let pokemonList = document.querySelector(".pokemon-list");
+
+    let listPokemon = document.createElement("li");
+
+    let button = document.createElement("button");
+
+    button.innerText = pokemon.name;
+
+    button.classList.add("button-styles");
+
+    button.addEventListener("click", function () {
+      showDetails(pokemon);
+    });
+
+    listPokemon.appendChild(button);
+
+    pokemonList.appendChild(listPokemon);
+  }
+
   return {
     getAll: getAll,
     add: add,
+    addListItem: addListItem,
   };
 })();
 
 pokemonRepository.add({
   id: 4,
-  name: "New Pokemon",
+  name: "New PokemonX",
   height: 1,
-  types: ["zz"],
+  types: ["XXX"],
   weight: 1,
 });
 
 let pokemonList = pokemonRepository.getAll();
+
 pokemonList.forEach((pokemon) => {
-  let pokemonList = document.querySelector(".pokemon-list");
-  let listItem = document.createElement("li");
-  let button = document.createElement("button");
-  button.innerText = pokemon.name;
-  button.classList.add("button-styles");
-  listItem.appendChild(button);
-  pokemonList.appendChild(listItem);
+  pokemonRepository.addListItem(pokemon);
 });
