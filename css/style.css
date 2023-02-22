@@ -17,7 +17,7 @@ body {
 }
 
 ul {
-  list-style-type: square;
+  list-style-type: none;
 }
 
 .size__announcer {
@@ -25,4 +25,12 @@ ul {
   position: relative;
   color: #ff0000;
   top: -2em;
+}
+
+.button-styles {
+  color: #ff0000;
+  margin: 8px;
+  border-radius: 50px;
+  min-width: 150px;
+  cursor: pointer;
 }

@@ -1,30 +1,5 @@
 //the reference belong: https://pokedex.org/#/pokemon/1 ↓↓↓
 
-// Update the pokemonList with "forEach"
-/*
-pokemonList.forEach((pokemon) => {
-  document.write(
-    "<ul> <li>" +
-      " ID: " +
-      pokemon.id +
-      "-" +
-      pokemon.name +
-      "(" +
-      "weight is : " +
-      pokemon.weight +
-      ")" +
-      "</li> </ul>"
-  );
-  if (pokemon.weight >= 9) {
-    document.write(
-      "<pre class='size__announcer'>" + "that's the big one! ⤴" + "</pre>"
-    );
-  }
-});
-*/
-
-// end
-
 const pokemonRepository = (function () {
   let pokemonList = [
     {
@@ -78,21 +53,11 @@ pokemonRepository.add({
 
 let pokemonList = pokemonRepository.getAll();
 pokemonList.forEach((pokemon) => {
-  document.write(
-    "<ul> <li>" +
-      " ID: " +
-      pokemon.id +
-      "-" +
-      pokemon.name +
-      "(" +
-      "weight is : " +
-      pokemon.weight +
-      ")" +
-      "</li> </ul>"
-  );
-  if (pokemon.weight >= 9) {
-    document.write(
-      "<pre class='size__announcer'>" + "that's the big one! ⤴" + "</pre>"
-    );
-  }
+  let pokemonList = document.querySelector(".pokemon-list");
+  let listItem = document.createElement("li");
+  let button = document.createElement("button");
+  button.innerText = pokemon.name;
+  button.classList.add("button-styles");
+  listItem.appendChild(button);
+  pokemonList.appendChild(listItem);
 });
