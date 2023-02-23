@@ -8,6 +8,7 @@ const pokemonRepository = (function () {
       height: 7,
       types: ["grass", "poison"],
       weight: 6.9,
+      src: "https://archives.bulbagarden.net/media/upload/thumb/f/fb/0001Bulbasaur.png/375px-0001Bulbasaur.png",
     },
     {
       id: 2,
@@ -15,6 +16,7 @@ const pokemonRepository = (function () {
       height: 6,
       types: ["fire"],
       weight: 8.5,
+      src: "https://archives.bulbagarden.net/media/upload/thumb/2/27/0004Charmander.png/375px-0004Charmander.png",
     },
     {
       id: 3,
@@ -22,6 +24,7 @@ const pokemonRepository = (function () {
       height: 5,
       types: ["water"],
       weight: 9,
+      src: "https://archives.bulbagarden.net/media/upload/thumb/b/bb/007Squirtle_Dream_2.png/180px-007Squirtle_Dream_2.png",
     },
   ];
 
@@ -35,10 +38,6 @@ const pokemonRepository = (function () {
     } else {
       console.error("it is not an object!");
     }
-  }
-
-  function showDetails(pokemon) {
-    console.log(pokemon);
   }
 
   function addListItem(pokemon) {
@@ -56,9 +55,20 @@ const pokemonRepository = (function () {
       showDetails(pokemon);
     });
 
+    let img = document.createElement("img");
+    img.src = pokemon.src;
+    img.alt = pokemon.name;
+    img.classList.add("pokemon_img");
+
     listPokemon.appendChild(button);
+    listPokemon.appendChild(img);
 
     pokemonList.appendChild(listPokemon);
+
+    function showDetails(pokemon) {
+      console.log(pokemon);
+      img.classList.toggle("pokemon_img--visible");
+    }
   }
 
   return {
@@ -70,10 +80,11 @@ const pokemonRepository = (function () {
 
 pokemonRepository.add({
   id: 4,
-  name: "New PokemonX",
+  name: "Pokemon Ball",
   height: 1,
-  types: ["XXX"],
+  types: ["Ball"],
   weight: 1,
+  src: "https://archives.bulbagarden.net/media/upload/d/dc/GO_Pok%C3%A9_Ball.png",
 });
 
 let pokemonList = pokemonRepository.getAll();
