@@ -1,5 +1,4 @@
-//the reference belong: https://pokedex.org/#/pokemon/1 ↓↓↓
-
+//the reference belong: https://pokedex.org/#/pokemon
 const pokemonRepository = (function () {
   let repository = [
     {
@@ -42,9 +41,7 @@ const pokemonRepository = (function () {
 
   function addListItem(pokemon) {
     let pokemonList = document.querySelector(".pokemon-list");
-
     let listPokemon = document.createElement("li");
-
     let button = document.createElement("button");
 
     button.innerText = pokemon.name;
