@@ -15,7 +15,6 @@ const pokemonRepository = (function () {
             detailsUrl: item.url,
           };
           add(pokemon);
-          console.log(pokemon);
         });
       })
       .catch(function (e) {
@@ -69,7 +68,6 @@ const pokemonRepository = (function () {
   }
 
   function showDetails(item) {
-    // console.log(item);
     // img.classList.toggle("pokemon_img--visible");
     pokemonRepository.loadDetails(item).then(function () {
       console.log(item);
@@ -86,16 +84,6 @@ const pokemonRepository = (function () {
   };
 })();
 
-// pokemonRepository.add({
-//   id: 4,
-//   name: "Pokemon Ball",
-//   height: 1,
-//   types: ["Ball"],
-//   weight: 1,
-//   src: "https://archives.bulbagarden.net/media/upload/d/dc/GO_Pok%C3%A9_Ball.png",
-// });
-
-// let pokemonList = pokemonRepository.getAll();
 pokemonRepository.loadList().then(function () {
   pokemonRepository.getAll().forEach(function (pokemon) {
     pokemonRepository.addListItem(pokemon);
