@@ -37,6 +37,7 @@ const pokemonRepository = (function () {
   function addListItem(pokemon) {
     let pokemonList = document.querySelector(".pokemon-list");
     let listPokemon = document.createElement("li");
+    listPokemon.classList.add("group-list-item");
     let buttonX = document.createElement("button");
     buttonX.innerText = pokemon.name;
     buttonX.setAttribute("data-toggle", "modal");
@@ -68,11 +69,10 @@ const pokemonRepository = (function () {
 
   function showDetails(pokemon) {
     pokemonRepository.loadDetails(pokemon).then(function () {
-      let modalContent = document.querySelector(".modal-content");
-
+      let modalContent = document.querySelector(".modal-body");
+      
       function showModal(pokemon, text) {
         modalContent.innerHTML = "";
-
         let newModal = document.createElement("div");
         newModal.classList.add("newModal");
 
