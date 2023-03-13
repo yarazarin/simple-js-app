@@ -70,7 +70,7 @@ const pokemonRepository = (function () {
   function showDetails(pokemon) {
     pokemonRepository.loadDetails(pokemon).then(function () {
       let modalContent = document.querySelector(".modal-body");
-      
+
       function showModal(pokemon, text) {
         modalContent.innerHTML = "";
         let newModal = document.createElement("div");

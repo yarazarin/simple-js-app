@@ -1,0 +1,97 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 700;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(rgb(247, 210, 236)),
+    color-stop(rgb(205, 249, 249)),
+    to(rgb(255, 255, 211))
+  );
+  background-image: -o-linear-gradient(
+    left,
+    rgb(247, 210, 236),
+    rgb(205, 249, 249),
+    rgb(255, 255, 211)
+  );
+  background-image: linear-gradient(
+    90deg,
+    rgb(247, 210, 236),
+    rgb(205, 249, 249),
+    rgb(255, 255, 211)
+  );
+}
+
+.navbar {
+  position: relative;
+  width: 100vw;
+  top: 0px;
+}
+
+.pokemon-list {
+  display: block;
+  margin: auto;
+  top: 20px;
+  -webkit-box-shadow: 0px 0px 15px black;
+  box-shadow: 0px 0px 15px black;
+  padding: 5px;
+  max-height: 400px;
+  max-width: 250px;
+  overflow-x: hidden;
+  padding: 15px;
+}
+
+.pokemon-list li {
+  margin: 1px;
+  position: relative;
+  display: block;
+  border: solid 1px black;
+  text-align: center;
+  background-color: transparent;
+}
+
+.pokemon-list li button {
+  min-width: 150px;
+}
+.pokemon_img {
+  margin: auto;
+  padding: 50px;
+  background-color: #9696962d;
+}
+
+.newModal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
