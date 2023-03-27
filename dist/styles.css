@@ -31,15 +31,23 @@ body {
   );
   background-image: -o-linear-gradient(
     left,
-    rgb(247, 210, 236),
-    rgb(205, 249, 249),
-    rgb(255, 255, 211)
+    rgba(255, 0, 0, 0.514),
+    rgba(255, 115, 0, 0.5),
+    rgba(251, 255, 0, 0.5),
+    rgba(0, 255, 13, 0.507),
+    rgba(0, 247, 255, 0.5),
+    rgba(17, 0, 255, 0.5),
+    rgba(255, 0, 200, 0.493)
   );
   background-image: linear-gradient(
-    90deg,
-    rgb(247, 210, 236),
-    rgb(205, 249, 249),
-    rgb(255, 255, 211)
+    180deg,
+    rgba(255, 0, 0, 0.514),
+    rgba(255, 115, 0, 0.5),
+    rgba(251, 255, 0, 0.5),
+    rgba(0, 255, 13, 0.507),
+    rgba(0, 247, 255, 0.5),
+    rgba(17, 0, 255, 0.5),
+    rgba(255, 0, 200, 0.493)
   );
 }
 
@@ -50,16 +58,17 @@ body {
 }
 
 .pokemon-list {
-  display: block;
+  display: grid;
+  grid-template-columns: auto;
   margin: auto;
-  top: 20px;
-  -webkit-box-shadow: 0px 0px 15px black;
+  max-width: 200px;
+  margin-top: 20px;
+  margin-bottom: 200px;
+  -webkit-box-shadow: 0px 0px 15px rgb(0, 0, 0);
   box-shadow: 0px 0px 15px black;
   padding: 5px;
-  max-height: 400px;
-  max-width: 250px;
-  overflow-x: hidden;
   padding: 15px;
+  border-radius: 8px;
 }
 
 .pokemon-list li {
@@ -71,6 +80,10 @@ body {
   background-color: transparent;
 }
 
+ul .btn:hover {
+  font-weight: bold;
+  color: rgb(54, 54, 54);
+}
 .pokemon-list li button {
   min-width: 150px;
 }
